@@ -1,0 +1,635 @@
+* {
+  box-sizing: border-box;
+}
+
+/* ================= PAGE ================= */
+
+.fifth-page-wrapper {
+  min-height: 100vh;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 25px;
+
+  background:
+    radial-gradient(
+      circle at 50% 20%,
+      #fffdfc 0%,
+      #fff8f7 45%,
+      #fdebed 100%
+    );
+
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+/* ================= CARD ================= */
+
+.fifth-card {
+  width: 100%;
+  max-width: 650px;
+  min-height: 720px;
+
+  position: relative;
+  overflow: hidden;
+
+  background: rgba(255, 255, 255, 0.92);
+
+  border: 1px solid #f5dfe2;
+  border-radius: 18px;
+
+  box-shadow:
+    0 15px 45px rgba(183, 94, 108, 0.12),
+    0 3px 12px rgba(183, 94, 108, 0.06);
+}
+
+/* ================= PROGRESS ================= */
+
+.fifth-progress-section {
+  width: 100%;
+
+  padding: 42px 42px 0;
+
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+}
+
+.fifth-step-count {
+  flex-shrink: 0;
+
+  padding: 5px 12px;
+
+  border: 1px solid #f3cbd0;
+  border-radius: 20px;
+
+  color: #dc7b87;
+  background: #fffafa;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.fifth-progress-bar {
+  flex: 1;
+
+  height: 5px;
+
+  display: flex;
+
+  gap: 5px;
+}
+
+.fifth-progress-bar span {
+  flex: 1;
+
+  height: 100%;
+
+  border-radius: 10px;
+
+  background: #f8e4e7;
+}
+
+.fifth-progress-bar .fifth-progress-active {
+  background: #ed7180;
+}
+
+/* ================= CONTENT ================= */
+
+.fifth-content {
+  min-height: 620px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+
+  padding: 55px 30px 45px;
+}
+
+/* ================= HEADING ================= */
+
+.fifth-content h1 {
+  margin: 0;
+
+  color: #171212;
+
+  font-family: Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: clamp(
+    34px,
+    4.8vw,
+    46px
+  );
+
+  line-height: 1.08;
+
+  font-weight: 700;
+
+  letter-spacing: -1.3px;
+}
+
+.fifth-content h1 span {
+  font-size: 35px;
+}
+
+/* ================= SUBTITLE ================= */
+
+.fifth-subtitle {
+  margin: 13px 0 0;
+
+  color: #71676a;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 14px;
+}
+
+/* ================= SECTION ================= */
+
+.fifth-section {
+  width: 100%;
+  max-width: 500px;
+
+  margin-top: 28px;
+}
+
+.fifth-section h3 {
+  margin: 0 0 13px;
+
+  color: #40383a;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* ================= DATE BOX ================= */
+
+.fifth-date-box {
+  width: 100%;
+  max-width: 360px;
+
+  height: 68px;
+
+  padding: 0 18px;
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  gap: 13px;
+
+  border: 1px solid #efd9dc;
+  border-radius: 14px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #fffdfd,
+      #fff8f9
+    );
+
+  cursor: pointer;
+
+  box-shadow:
+    0 5px 16px
+    rgba(183, 94, 108, 0.06);
+
+  transition:
+    all 0.25s ease;
+}
+
+.fifth-date-box:hover {
+  border-color: #e8a3ac;
+
+  box-shadow:
+    0 7px 20px
+    rgba(226, 82, 99, 0.10);
+
+  transform: translateY(-2px);
+}
+
+/* ================= CALENDAR ICON ================= */
+
+.calendar-icon {
+  width: 39px;
+  height: 39px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+
+  background: #fff0f2;
+
+  font-size: 19px;
+}
+
+/* ================= DATE TEXT ================= */
+
+.date-text {
+  flex: 1;
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  gap: 4px;
+
+  font-family: Arial, sans-serif;
+}
+
+.date-text small {
+  color: #a58e93;
+
+  font-size: 10px;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.5px;
+}
+
+.date-text span {
+  color: #40383a;
+
+  font-size: 14px;
+
+  font-weight: 500;
+}
+
+.date-text .date-placeholder {
+  color: #a58e93;
+}
+
+/* ================= DATE INPUT ================= */
+
+.fifth-date-box input {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  opacity: 0;
+
+  cursor: pointer;
+}
+
+/* ================= DATE ARROW ================= */
+
+.calendar-arrow {
+  color: #d96b78;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 21px;
+
+  margin-top: -5px;
+}
+
+/* ================= TIME ================= */
+
+.fifth-time-section {
+  margin-top: 27px;
+}
+
+.fifth-time-options {
+  width: 100%;
+  max-width: 500px;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, 1fr);
+
+  gap: 11px;
+}
+
+/* ================= TIME CARD ================= */
+
+.fifth-time-card {
+  height: 76px;
+
+  position: relative;
+
+  border: 1px solid #efd9dc;
+  border-radius: 12px;
+
+  background: #fffdfd;
+
+  color: #40383a;
+
+  cursor: pointer;
+
+  font-family: Arial, sans-serif;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 5px;
+
+  transition:
+    all 0.25s ease;
+}
+
+.fifth-time-card:hover {
+  border-color: #e8a3ac;
+
+  background: #fffafa;
+
+  box-shadow:
+    0 6px 15px
+    rgba(226, 82, 99, 0.07);
+}
+
+.fifth-time-card strong {
+  font-size: 12px;
+
+  font-weight: 600;
+}
+
+.fifth-time-card small {
+  color: #9a898d;
+
+  font-size: 11px;
+}
+
+/* ================= SELECTED TIME ================= */
+
+.fifth-time-card.fifth-selected {
+  border: 1.5px solid #e56f7d;
+
+  background: #fff4f5;
+
+  color: #d95c6b;
+
+  box-shadow:
+    0 6px 17px
+    rgba(226, 82, 99, 0.10);
+}
+
+.fifth-time-card.fifth-selected small {
+  color: #d77b85;
+}
+
+/* ================= CHECK ================= */
+
+.fifth-time-check {
+  width: 21px;
+  height: 21px;
+
+  position: absolute;
+
+  top: -7px;
+  right: -7px;
+
+  border-radius: 50%;
+
+  background: #ed6575;
+
+  color: white;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow:
+    0 3px 8px
+    rgba(226, 82, 99, 0.25);
+}
+
+/* ================= BUTTON ================= */
+
+.fifth-button-wrapper {
+  margin-top: 30px;
+}
+
+.fifth-continue-btn {
+  width: 185px;
+  height: 53px;
+
+  border-radius: 10px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ed6575,
+      #ed5366
+    );
+
+  color: white;
+
+  text-decoration: none;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 15px;
+
+  font-weight: 500;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  box-shadow:
+    0 7px 18px
+    rgba(226, 82, 99, 0.22);
+
+  transition:
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.fifth-continue-btn:hover {
+  color: white;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ec5d6e,
+      #e9475c
+    );
+
+  box-shadow:
+    0 10px 25px
+    rgba(226, 82, 99, 0.3);
+}
+
+.fifth-continue-btn span {
+  font-size: 20px;
+}
+
+/* ================= TABLET ================= */
+
+@media (max-width: 700px) {
+
+  .fifth-page-wrapper {
+    padding: 15px;
+  }
+
+  .fifth-card {
+    min-height: 680px;
+  }
+
+  .fifth-progress-section {
+    padding: 30px 25px 0;
+  }
+
+  .fifth-content {
+    padding: 48px 20px 40px;
+  }
+
+  .fifth-content h1 {
+    font-size: 36px;
+  }
+
+  .fifth-date-box {
+    max-width: 350px;
+  }
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 500px) {
+
+  .fifth-page-wrapper {
+    padding: 12px;
+  }
+
+  .fifth-card {
+    min-height: 650px;
+
+    border-radius: 16px;
+  }
+
+  .fifth-progress-section {
+    padding: 23px 18px 0;
+
+    gap: 10px;
+  }
+
+  .fifth-step-count {
+    font-size: 11px;
+
+    padding: 5px 10px;
+  }
+
+  .fifth-progress-bar {
+    gap: 3px;
+
+    height: 4px;
+  }
+
+  .fifth-content {
+    padding: 40px 17px 35px;
+  }
+
+  .fifth-content h1 {
+    font-size: 31px;
+
+    letter-spacing: -0.8px;
+  }
+
+  .fifth-content h1 span {
+    font-size: 27px;
+  }
+
+  .fifth-subtitle {
+    font-size: 13px;
+  }
+
+  /* DATE */
+
+  .fifth-section {
+    margin-top: 25px;
+  }
+
+  .fifth-date-box {
+    height: 63px;
+
+    max-width: 330px;
+
+    padding: 0 15px;
+
+    gap: 11px;
+  }
+
+  .calendar-icon {
+    width: 36px;
+    height: 36px;
+
+    font-size: 17px;
+  }
+
+  .date-text small {
+    font-size: 9px;
+  }
+
+  .date-text span {
+    font-size: 13px;
+  }
+
+  /* TIME */
+
+  .fifth-time-section {
+    margin-top: 23px;
+  }
+
+  .fifth-time-options {
+    grid-template-columns:
+      repeat(2, 1fr);
+
+    gap: 8px;
+  }
+
+  .fifth-time-card {
+    height: 69px;
+  }
+
+  .fifth-time-card strong {
+    font-size: 10.5px;
+  }
+
+  .fifth-time-card small {
+    font-size: 10px;
+  }
+
+  /* BUTTON */
+
+  .fifth-button-wrapper {
+    margin-top: 25px;
+  }
+
+  .fifth-continue-btn {
+    width: 175px;
+    height: 50px;
+
+    font-size: 14px;
+  }
+}

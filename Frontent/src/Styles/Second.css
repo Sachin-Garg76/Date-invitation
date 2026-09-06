@@ -1,0 +1,462 @@
+* {
+  box-sizing: border-box;
+}
+
+.second-page-wrapper {
+  min-height: 100vh;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 25px;
+
+  background:
+    radial-gradient(
+      circle at 50% 20%,
+      #fffdfc 0%,
+      #fff8f7 45%,
+      #fdebed 100%
+    );
+
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.second-card {
+  width: 100%;
+  max-width: 650px;
+  min-height: 400px;
+
+  position: relative;
+  overflow: hidden;
+
+  background: rgba(255, 255, 255, 0.9);
+
+  border: 1px solid #f5dfe2;
+  border-radius: 18px;
+
+  box-shadow:
+    0 15px 45px rgba(183, 94, 108, 0.12),
+    0 3px 12px rgba(183, 94, 108, 0.06);
+}
+
+/* =========================
+   Progress
+========================= */
+
+.second-progress-section {
+  width: 100%;
+
+  padding: 42px 42px 0;
+
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+}
+
+.second-step-count {
+  flex-shrink: 0;
+
+  padding: 5px 12px;
+
+  border: 1px solid #f3cbd0;
+  border-radius: 20px;
+
+  color: #dc7b87;
+  background: #fffafa;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.second-progress-bar {
+  flex: 1;
+
+  height: 5px;
+
+  display: flex;
+  gap: 5px;
+}
+
+.second-progress-bar span {
+  flex: 1;
+
+  height: 100%;
+
+  border-radius: 10px;
+
+  background: #f8e4e7;
+}
+
+.second-progress-bar .second-progress-active {
+  background: #ed7180;
+}
+
+/* =========================
+   Content
+========================= */
+
+.second-content {
+  min-height: 620px;
+
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+
+  padding: 65px 30px 50px;
+}
+
+.second-content h1 {
+  margin: 0;
+
+  color: #171212;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: clamp(38px, 5vw, 49px);
+
+  line-height: 1.08;
+
+  font-weight: 700;
+
+  letter-spacing: -1.5px;
+
+  position: relative;
+  z-index: 2;
+}
+
+.second-content h1 span {
+  display: inline-block;
+  font-size: 38px;
+}
+
+.second-subtitle {
+  margin: 15px 0 0;
+
+  color: #71676a;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 15px;
+}
+
+/* =========================
+   GIF
+========================= */
+
+.second-gif-container {
+  width: 220px;
+  height: 220px;
+
+  margin-top: 5px;
+  margin-bottom: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+}
+
+.second-love-gif {
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+
+  display: block;
+}
+
+/* =========================
+   Floating Hearts
+========================= */
+
+.floating-heart {
+  position: absolute;
+
+  color: #f29aa4;
+
+  font-size: 18px;
+
+  opacity: 0.65;
+
+  animation: floatingHeart 3s ease-in-out infinite;
+
+  pointer-events: none;
+}
+
+.heart-one {
+  top: 75px;
+  left: 70px;
+}
+
+.heart-two {
+  top: 115px;
+  right: 75px;
+
+  font-size: 14px;
+
+  animation-delay: 0.8s;
+}
+
+.heart-three {
+  top: 290px;
+  left: 95px;
+
+  font-size: 13px;
+
+  animation-delay: 1.2s;
+}
+
+.heart-four {
+  top: 310px;
+  right: 100px;
+
+  font-size: 16px;
+
+  animation-delay: 1.8s;
+}
+
+@keyframes floatingHeart {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-10px) rotate(8deg);
+  }
+}
+
+/* =========================
+   Buttons
+========================= */
+
+.date-buttons {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 18px;
+
+  margin-top: 5px;
+}
+
+/* YES */
+
+.yes-button {
+  min-width: 170px;
+  height: 52px;
+
+  padding: 0 28px;
+
+  border-radius: 10px;
+
+  background: linear-gradient(
+    135deg,
+    #ed6575,
+    #ed5366
+  );
+
+  color: white;
+
+  text-decoration: none;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 15px;
+  font-weight: 500;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  box-shadow:
+    0 7px 18px rgba(226, 82, 99, 0.22);
+
+  transition:
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.yes-button:hover {
+  color: white;
+
+  background: linear-gradient(
+    135deg,
+    #ec5d6e,
+    #e9475c
+  );
+
+  box-shadow:
+    0 10px 25px rgba(226, 82, 99, 0.3);
+}
+
+/* NO */
+
+.no-button {
+  min-width: 170px;
+  height: 52px;
+
+  padding: 0 28px;
+
+  border: 1px solid #e99da6;
+
+  border-radius: 10px;
+
+  background: #fffafa;
+
+  color: #d86f7b;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 15px;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.no-button:hover:not(:disabled) {
+  background: #fff1f3;
+  border-color: #e78490;
+}
+
+/* Disabled after Maybe */
+
+.no-button-disabled {
+  cursor: not-allowed;
+
+  opacity: 0.55;
+
+  background: #f8f3f4;
+
+  border-color: #e2cdd0;
+
+  color: #b99da1;
+}
+
+.no-button-disabled:hover {
+  background: #f8f3f4;
+  border-color: #e2cdd0;
+}
+
+/* =========================
+   Mobile
+========================= */
+
+@media (max-width: 700px) {
+
+  .second-page-wrapper {
+    padding: 15px;
+  }
+
+  .second-card {
+    min-height: 650px;
+  }
+
+  .second-progress-section {
+    padding: 28px 25px 0;
+  }
+
+  .second-content {
+    min-height: 570px;
+
+    padding: 55px 20px 45px;
+  }
+
+  .second-content h1 {
+    font-size: 36px;
+  }
+
+  .second-subtitle {
+    font-size: 14px;
+  }
+
+  .second-gif-container {
+    width: 190px;
+    height: 190px;
+  }
+
+  .heart-one {
+    left: 35px;
+  }
+
+  .heart-two {
+    right: 35px;
+  }
+
+  .date-buttons {
+    gap: 12px;
+  }
+
+  .yes-button,
+  .no-button {
+    min-width: 145px;
+  }
+}
+
+@media (max-width: 420px) {
+
+  .second-card {
+    min-height: 620px;
+  }
+
+  .second-progress-section {
+    padding: 23px 18px 0;
+  }
+
+  .second-content {
+    padding-top: 48px;
+  }
+
+  .second-content h1 {
+    font-size: 31px;
+    letter-spacing: -0.8px;
+  }
+
+  .second-content h1 span {
+    font-size: 27px;
+  }
+
+  .second-gif-container {
+    width: 170px;
+    height: 170px;
+  }
+
+  .date-buttons {
+    flex-direction: column;
+
+    width: 100%;
+
+    margin-top: 8px;
+  }
+
+  .yes-button,
+  .no-button {
+    width: 180px;
+    min-width: 180px;
+  }
+
+  .floating-heart {
+    font-size: 14px;
+  }
+}
