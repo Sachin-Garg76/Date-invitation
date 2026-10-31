@@ -148,7 +148,7 @@ const Fifth = () => {
           >
             Great! Now pick a
             <br />
-            date & time <span>💕</span>
+            date & time's <span>💕</span>
           </motion.h1>
 
           {/* Subtitle */}
